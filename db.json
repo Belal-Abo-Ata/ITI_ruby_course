@@ -1,7 +1,14 @@
 [
   {
+    "isbn": 1,
+    "title": "Haha",
+    "author": "Hamada",
+    "count": 1
+  },
+  {
     "isbn": 2,
-    "title": "j",
-    "author": "s"
+    "title": "Harry Potter",
+    "author": "Koko",
+    "count": 1
   }
 ]
