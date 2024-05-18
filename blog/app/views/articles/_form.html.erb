@@ -21,6 +21,11 @@
   </div>
 
   <div>
+     <%= form.label :image %><br>
+    <%= form.file_field :image %><br>
+  </div>
+  <%= form.hidden_field :user_id, value: current_user.id if current_user %>
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

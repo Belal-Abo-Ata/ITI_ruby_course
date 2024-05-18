@@ -1,12 +1,21 @@
 <h1><%= @article.title %></h1>
-<p><%= @article.body%></p>
+<p><%= @article.body%></p><br />
+<p>Report Count: <%= @article.report_count%></p><br />
+<p>Status: <%= @article.status%></p><br />
+<% if @article.image.attached? %>
+  <%= image_tag @article.image %>
+<% end %>
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Delete", article_path(@article), data: {
+  <li><%= link_to "Delete", @article, data: {
     turbo_method: "delete",
     turbo_confirm: "Are You Sure?"
   } %></li>
+  <%= link_to 'Report', increase_report_count_article_path(@article), data: {
+    turbo_method: "post"
+  }%>
+
 
 </ul>
 
